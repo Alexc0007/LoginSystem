@@ -51,13 +51,13 @@ public class Hash
 	{
 		String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"; //allowed chars for salt
 		StringBuilder salt = new StringBuilder();
-        Random rnd = new Random();
-        while (salt.length() < saltLength)
-        {
-        	int index = (int) (rnd.nextFloat() * SALTCHARS.length());
-        	salt.append(SALTCHARS.charAt(index));
-        }
-		
+		Random rnd = new Random();
+		while (salt.length() < saltLength)
+		{
+			int index = (int) (rnd.nextFloat() * SALTCHARS.length());
+			salt.append(SALTCHARS.charAt(index));
+		}
+
 		String generatedSalt = salt.toString();
 		return generatedSalt;
 	}
